@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مركز قوش النسائي – نجران</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f8f3ec; --surface:#fffdf9; --ink:#3a2c1c; --muted:#7a6a55; --line:#e6dccb;
+  --accent:#8c7448; --accent-ink:#ffffff; --sel:#efe3cd;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1c1610; --surface:#251d15; --ink:#f3ebde; --muted:#bba98f; --line:#41362a;
+    --accent:#c9a96a; --accent-ink:#2a2218; --sel:#3a2e1f;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1c1610; --surface:#251d15; --ink:#f3ebde; --muted:#bba98f; --line:#41362a;
+  --accent:#c9a96a; --accent-ink:#2a2218; --sel:#3a2e1f;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic",Tahoma,sans-serif;line-height:1.8;font-size:17px;padding-bottom:96px}
+.demo{background:var(--ink);color:var(--bg);text-align:center;font-size:13px;padding:5px 12px}
+.wrap{max-width:640px;margin:0 auto;padding:0 22px}
+.hero{padding:54px 0 34px;border-bottom:1px solid var(--line)}
+.name{color:var(--accent);font-weight:500;margin:0 0 14px;font-size:18px}
+.name span{direction:ltr;display:inline-block;letter-spacing:.16em;font-size:13px;margin-inline-start:10px;color:var(--muted)}
+h1{font-family:"Aref Ruqaa","IBM Plex Sans Arabic",Tahoma,serif;font-weight:700;font-size:clamp(40px,12vw,64px);line-height:1.5;margin:0}
+.hero p{color:var(--muted);margin:14px 0 0;max-width:28em}
+.how{margin:30px 0 8px;font-size:15px;color:var(--muted)}
+h2{font-family:"Aref Ruqaa",Tahoma,serif;font-size:30px;margin:34px 0 4px}
+details{margin-top:14px;background:var(--surface);border:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;background:var(--accent);color:var(--accent-ink);padding:10px 16px;font-weight:500;display:flex;justify-content:space-between}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;line-height:1.4}
+details[open] summary::after{content:"−"}
+summary:focus-visible,.it:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.it{display:flex;justify-content:space-between;gap:14px;width:100%;padding:11px 16px;background:none;border:0;border-bottom:1px solid var(--line);color:var(--ink);font:400 17px "IBM Plex Sans Arabic",Tahoma,sans-serif;text-align:start;cursor:pointer}
+.it:last-child{border-bottom:0}
+.it[aria-pressed="true"]{background:var(--sel)}
+.it[aria-pressed="true"] b::before{content:"✓ ";color:var(--accent)}
+.it b{font-weight:400}
+.it span{white-space:nowrap;font-weight:500}
+.it small{color:var(--muted);font-weight:400}
+.gnote{font-size:14px;color:var(--muted);padding:8px 16px 12px;margin:0}
+label{display:block;margin:14px 0 6px;font-weight:500}
+input{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font:400 17px "IBM Plex Sans Arabic",Tahoma,sans-serif}
+.info p{margin:4px 0}
+.info a{color:var(--accent)}
+footer{margin-top:34px;font-size:14px;color:var(--muted)}
+.bar{position:fixed;inset:auto 0 0 0;background:var(--ink);color:var(--bg);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 18px calc(12px + env(safe-area-inset-bottom,0px));z-index:5}
+.bar div{font-size:15px;line-height:1.5}
+.bar a{background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:500;padding:10px 20px;border-radius:999px;white-space:nowrap}
+.bar a:focus-visible{outline:3px solid var(--bg);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="demo">نسخة تجريبية مقترحة للمركز، وليست الصفحة الرسمية</div>
+<header class="hero"><div class="wrap">
+  <p class="name">مركز قوش النسائي<span>GOSH SALON BEAUTY</span></p>
+  <h1>أنتِ الحكاية، ونحن نزيّن تفاصيلها</h1>
+  <p>نجران، حي الجامعة. اختاري خدماتك من القائمة، ويصلنا طلبك على واتساب جاهزًا.</p>
+</div></header>
+
+<main class="wrap">
+  <h2>اختاري خدماتك</h2>
+  <p class="how">افتحي القسم واضغطي على الخدمة لإضافتها، وتظهر لك القيمة التقريبية في الشريط بالأسفل.</p>
+  <div id="menu"></div>
+
+  <h2>تفاصيل موعدك</h2>
+  <label for="name">اسمك</label>
+  <input id="name" type="text" autocomplete="name" placeholder="مثال: نورة">
+  <label for="when">الوقت المناسب</label>
+  <input id="when" type="text" placeholder="مثال: الخميس الساعة 5">
+
+  <div class="info">
+    <h2>الدوام والموقع</h2>
+    <p>نستقبلكم من 2 مساءً إلى 10 مساءً.</p>
+    <p>نجران، حي الجامعة</p>
+    <p><a href="https://www.google.com/maps/search/?api=1&query=%D9%85%D8%B1%D9%83%D8%B2%20%D9%82%D9%88%D8%B4%20%D8%A7%D9%84%D9%86%D8%B3%D8%A7%D8%A6%D9%8A%20%D9%86%D8%AC%D8%B1%D8%A7%D9%86%20%D8%AD%D9%8A%20%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D8%A9" target="_blank" rel="noopener">افتحي الموقع في الخرائط</a></p>
+    <p>للتواصل: <a href="tel:+966535554804" dir="ltr">0535554804</a></p>
+  </div>
+  <footer>نموذج تجريبي لعرض الفكرة. الأسعار من قائمة المركز المنشورة وقد تتغير، والمجموع تقريبي.</footer>
+</main>
+
+<div class="bar">
+  <div id="sum">اختاري خدمة أو أكثر</div>
+  <a id="go" href="#" target="_blank" rel="noopener">أرسلي الطلب</a>
+</div>
+
+<script>
+var PHONE = "966535554804";
+/* [اسم, سعر, نوع]: 1 = يبدأ من، 2 = تقريبي */
+var G = [
+ ["الإهداء والحفلات",[["بطاقة إهداء خدمة لمن تحبين",150,2],["تجهيز حفلة أو مناسبة",150,2]],"السعر تقريبي ويتحدد حسب الخدمات المطلوبة وعدد الحاضرات."],
+ ["الأظافر والجل",[["طلاء أظافر",23],["طلاء أظافر جل",100],["طلاء فرنسي",50],["طلاء أومبريه",150],["طلاء كروم",115],["تركيب أظافر أسبوعية",60],["سوفت جل",300],["جل أوفرلاي",200],["هارد جيل",400],["إزالة جل",150]]],
+ ["الباديكير والمانيكير",[["باديكير",100],["مانيكير",60],["باديكير ومانيكير VIP",250],["فوت سبا",230]]],
+ ["الشعر",[["قص شعر",50,1],["صبغة لون واحد",250,1],["صبغة هايلايت",300,1],["استشوار",50,1],["تسريحة شعر",200,1],["غسيل شعر",23]]],
+ ["علاجات الشعر",[["بروتين شعر",600,1],["بلو كافيار",400,1],["ديتوكس فروة",250],["ماسك الأفوكادو",130],["حنا شعر",120]]],
+ ["المكياج والرموش",[["مكياج ناعم",200],["مكياج سهرة",300],["رموش شهرية كلاسيك",250],["رموش شهرية هايبرد",290],["رموش أسبوعية",70]]],
+ ["البشرة والحواجب",[["تنظيف بشرة بالبخار",150],["تنظيف بشرة تالقو",250],["حف أو تشقير حواجب",30],["صبغة حواجب",35]]],
+ ["المساج والحمام المغربي",[["مساج الاسترخاء",200],["مساج بعد الولادة",400],["حمام مغربي تقليدي",170],["حمام مغربي كلاسيك",250],["حمام مغربي ملكي",340]]],
+ ["الحف",[["حف وجه",50],["حف يدين كاملة",120],["حف رجلين كاملة",160],["حف جسم كامل",400]]]
+];
+var menu = document.getElementById("menu"), html = "", sel = {};
+G.forEach(function(g, gi){
+  html += "<details" + (gi == 0 ? " open" : "") + "><summary>" + g[0] + "</summary>";
+  g[1].forEach(function(s, si){
+    var p = s[2] == 1 ? "<small>من </small>" + s[1] : s[2] == 2 ? "<small>حوالي </small>" + s[1] : s[1];
+    html += "<button type=\"button\" class=\"it\" aria-pressed=\"false\" data-k=\"" + gi + "-" + si + "\"><b>" + s[0] + "</b><span>" + p + "</span></button>";
+  });
+  if (g[2]) html += "<p class=\"gnote\">" + g[2] + "</p>";
+  html += "</details>";
+});
+menu.innerHTML = html;
+var nm = document.getElementById("name"), wh = document.getElementById("when"),
+    go = document.getElementById("go"), sum = document.getElementById("sum");
+menu.addEventListener("click", function(e){
+  var b = e.target.closest(".it"); if (!b) return;
+  var k = b.getAttribute("data-k");
+  if (sel[k]) { delete sel[k]; b.setAttribute("aria-pressed", "false"); }
+  else { var a = k.split("-"); sel[k] = G[a[0]][1][a[1]]; b.setAttribute("aria-pressed", "true"); }
+  update();
+});
+function update(){
+  var items = Object.keys(sel).map(function(k){ return sel[k]; });
+  var total = items.reduce(function(t, s){ return t + s[1]; }, 0);
+  sum.textContent = items.length ? items.length + " خدمة، المجموع التقريبي " + total + " ريال" : "اختاري خدمة أو أكثر";
+  var who = nm.value.trim() ? "أنا " + nm.value.trim() + "، " : "";
+  var list = items.length ? " أبغى أحجز:\n" + items.map(function(s){ return "- " + s[0]; }).join("\n") + "\nالمجموع التقريبي: " + total + " ريال." : " أبغى أحجز موعد.";
+  var t = wh.value.trim() ? "\nوقتي المناسب: " + wh.value.trim() + "." : "";
+  go.href = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent("السلام عليكم، " + who + list + t);
+}
+[nm, wh].forEach(function(el){ el.addEventListener("input", update); });
+update();
+</script>
+</body>
+</html>
